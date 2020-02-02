@@ -1,0 +1,2 @@
+class vitamins : quantity ideale, quantite survie
+, cout absolu, cout minimum, servings
