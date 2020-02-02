@@ -1,0 +1,37 @@
+Objet : Billet
+Cout : 600€
+Section: Transport
+Rang : 1
+Importance: Incompressible
+=====================================
+Objet :  
+Cout : 600€
+Section: Transport
+Rang : 1
+Importance: Incompressible
+=====================================
+Objet : Billet
+Cout : 600€
+Section: Transport
+Rang : 1
+Importance: Incompressible
+=====================================
+Objet : Billet
+Cout : 600€
+Section: Transport
+Rang : 1
+Importance: Incompressible
+=====================================
+Objet : Billet
+Cout : 600€
+Section: Transport
+Rang : 1
+Importance: Incompressible
+=====================================
+Objet : Billet
+Cout : 600€
+Section: Transport
+Rang : 1
+Importance: Incompressible
+=====================================
+

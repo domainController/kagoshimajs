@@ -1,0 +1,36 @@
+Objet : billet
+eStimation: 600€
+type: transport
+Importance: Incompressible
+=====================================
+Objet : nootropiques
+estimation : 300€
+type: bouffe
+Importance: primordial
+=====================================
+Objet : vitamines
+estimation : 300€
+type: bouffe
+Importance: primordial
+=====================================
+Objet : box
+estimation : 600€
+type: logement
+Importance: necessaire
+=====================================
+Objet : muscul
+estimation : 600€
+type: hygiene
+Importance: ideal
+=====================================
+Objet : tram
+estimation : 300€
+type: transport
+Importance: ideal
+=====================================
+Objet : pates
+estimation : 600€
+type: bouffe
+Importance: ideal
+=====================================
+
