@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Budget App </title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>Nomenclature des categories du budget trip</h1>
+
+
+    // creation de l'objet des colonnes ou lignes du tableau:
+
+    class Besoin {
+      constructor(genre, estimation, type, importance, pourcentage){
+        // this = Un pointeur => Allocation memoire
+
+          this.genre       = genre;
+          this.estimation  = estimation;
+          this.type        = type;
+          this.importance  = importance;
+          this.pourcentage = pourcentage;
+
+          // return this
+      }
+    }
+
+    console.log(Besoin);
+
+    // j'instancie un premier objet:
+
+    let micronutriments = new Besoin("Vitamins", 600, "Supplements", "primordial", 20 );
+
+
+
+  </body>
+</html>

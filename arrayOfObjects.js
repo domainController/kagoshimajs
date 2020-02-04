@@ -1,5 +1,5 @@
  // creating an array of objects
-
+ 
 let expenses = [
 	{
 	  category: "plane",
@@ -74,5 +74,16 @@ let expenses = [
 	  pourcentage: 20
 	},
 ]
+// console.log(expenses[9].estimation);
 
-console.log(expenses[9].estimation);
+// imprime tous les objets 
+
+for (var i in expenses) {
+	console.log(expenses[i]);
+}
+// imprime toutes les valeurs de la propriete estimation a la suite
+
+for (var i in expenses) {
+	console.log(expenses[i].estimation);
+}
+
