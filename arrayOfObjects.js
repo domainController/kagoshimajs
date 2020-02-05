@@ -34,10 +34,18 @@ let expenses = [
 	  pourcentage: 20
 	},
  	{
-	  category:  "foodStock",
-	  genre: "pasta",
+	  category:  "pasta",
+	  genre: "alimentation",
 	  estimation : 600, 
-	  type: "alimentation", 
+	  type: "foodStock", 
+	  importance: "comfort",
+	  pourcentage: 20
+	},
+	{
+	  category:  "sante",
+	  genre: "hygiene",
+	  estimation : 600, 
+	  type: "foodStock", 
 	  importance: "comfort",
 	  pourcentage: 20
 	},
@@ -87,3 +95,12 @@ for (var i in expenses) {
 	console.log(expenses[i].estimation);
 }
 
+/* YouTube loop example RxjQgIhEPWE, affiche la category et type
+ * des depenses dont l'estimation est en dessous de 400€
+*/
+
+for(i = 0; i < expenses.length; i++) {
+	if(expenses[i].estimation < 400) {
+		console.log(expenses[i].category + "," + expenses[i].type)
+	}
+}
