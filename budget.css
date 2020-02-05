@@ -13,12 +13,17 @@ h2
 	color: purple;
 }
 
-#highTech
+.highTech
 {
 	color: red;
 }
 
-#hiking
+.hiking
 {
 	color: green;
+}
+
+.brainHacks
+{
+	background-color: darkorange;
 }
