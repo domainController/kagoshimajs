@@ -3,93 +3,134 @@
 let expenses = [
 	{
 	  category: "plane",
-	  genre: "flight ticket",
+	  description: "flight ticket",
 	  estimation: 600,
 	  type: "transportation", 
+	  urgency: "critical",
 	  importance: "incompressible",
+	  priority: "critical",
+	  impact: 1,
 	  pourcentage: 20
 	},
  	{
 	  category: "smartDrugs",
-	  genre: "nootropics",
+	  description: "nootropics",
 	  estimation:  300, 
-	  type: "supplements", 
+	  type: "supplements",
+	  urgency: "high",
 	  importance: "primordial",
+	  priority: "critical",
+	  impact: 1,
 	  pourcentage: 20
 	},
  	{
-	  category: "micronutriment",
-	  genre: "vitamins",
+	  category: "micronutriments",
+	  description: "vitamins",
 	  estimation: 500, 
-	  type: "supplements", 
+	  type: "supplements",
+	  urgency: "high",
 	  importance: "primordial",
+	  priority: "critical",
+	  impact: 1,
 	  pourcentage: 20
 	},
  	{
-	  category:  "box",
-	  genre: "self-storage",
+	  category:  "self-storage",
+	  description: "box rent",
 	  estimation: 600,
-	  type: "logement", 
+	  type: "logement",
+	  urgency: "medium", 
 	  importance: "indispensable",
+	  priority: "high",
+	  impact: 2,
 	  pourcentage: 20
 	},
  	{
-	  category:  "pasta",
-	  genre: "alimentation",
+	  category:  "alimentation",
+	  description: "food stock",
 	  estimation : 600, 
-	  type: "foodStock", 
+	  type: "box", 
+	  urgency: "medium",
 	  importance: "comfort",
+	  priority: "medium",
+	  impact: 2,
 	  pourcentage: 20
 	},
 	{
 	  category:  "sante",
-	  genre: "hygiene",
+	  description: "hygiene",
 	  estimation : 600, 
-	  type: "foodStock", 
+	  type: "box", 
+	  urgency: "medium",
 	  importance: "comfort",
+	  priority: "medium",
+	  impact: 2,
 	  pourcentage: 20
 	},
  	{
 	  category:  "movingAround",
-	  genre: "bus pass",
+	  description: "bus pass",
 	  estimation: 700, 
 	  type: "transportation", 
+	  urgency: "medium",
 	  importance: "comfort",
+	  priority: "medium",
+	  impact: 2,
 	  pourcentage: 20
 	 },
  	{
-	  category:  "shower",
-	  genre: "gym pass",
+	  category:  "healthcare",
+	  description: "gym pass",
 	  estimation: 350, 
 	  type: "hygiene", 
+	  urgency: "medium",
 	  importance: "comfort",
+	  priority: "medium",
+	  impact: 2,
 	  pourcentage: 20
 	},
- 	{
-	  category:  "backupGear",
-	  genre: "gear upgrade",
+	{
+	  category:  "gearUpgrade",
+	  description: "high tech and hiking gear"
 	  estimation: 500, 
 	  type: "gear", 
+	  urgency: "medium",
 	  importance: "comfort",
+	  priority: "medium",
+	  impact: 2,
 	  pourcentage: 20
 	},
  	{
 	  category: "miscellaneous",
-	  genre: "misc",
+	  description: "misc",
 	  estimation: 200, 
 	  type: "divers", 
-	  importance: "extra",
+	  urgency: "medium",
+	  importance: "comfort",
+	  priority: "medium",
+	  impact: 2, 
 	  pourcentage: 20
 	},
 ]
 // console.log(expenses[9].estimation);
+
+
+// retourne une liste numerotée des objets
+
+for (let i = 0; i < expenses.length ; i++)
+  {console.log(i + "." + expenses[i].category ); }
+
+// affiche le nombre d'objets  
+
+for (var i in expenses) {
+	console.log(expenses.length);}
 
 // imprime tous les objets 
 
 for (var i in expenses) {
 	console.log(expenses[i]);
 }
-// imprime toutes les valeurs de la propriete estimation a la suite
+// imprime toutes les valeurs de la propriété estimation a la suite
 
 for (var i in expenses) {
 	console.log(expenses[i].estimation);
