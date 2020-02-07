@@ -9,19 +9,35 @@
 <body>
 	<script type="text/javascript">
 
-		class Expense {
-			constructor(category, description, estimation, type, urgency, priority, impact, pourcentage) 
-			{
-				this.category      = alimentation;
-				this.description    = description;
-				this.estimation     = estimation;
-				this.type           = type;
-				this.urgency        = urgency;
-				this.priority       = priority;
-				this.impact         = impact;
-				this.pourcentage    = pourcentage;
-			}
-		}
+// creating an array of objects
+
+class Nootropics {
+	constructor(description, category, price, quantity, monthlyServingsNeed, pricePerServings, monthlyPrice, percentage, url) {
+
+		this.description   		= description;
+		this.category      		= category;
+		this.price 		   		= price;
+		this.quantity	   		= quantity;
+		this.monthlyServingsNeed = monthlyServingsNeed;
+		this.pricePerServings 	= pricePerServings;
+		this.monthlyPrice  		= monthlyPrice;
+		this.percentage    		= percentage;
+		this.url  		   		= url;
+	}
+
+// retourne le cout de revient du nootroopics par servings:
+
+	pricePerServings() {
+   		var long_pPS = nootropics.price / nootropics.quantity;
+   		var round_pPS = long_pPS.toFixed(2);
+   		return round_pPS;
+ 	}
+}
+
+//  creation de deux instances de l'objet
+
+var  pramiracetam 	 = new Nootropics('pramiracetam','racetam',104, 200, 10, 'pPS', 'mP', '%', 'www');
+var  phenylpiracetam = new Nootropics('phenylpiracetam','racetam',48, 90, 10, 'pPS', 'mP', '%', 'www');
 
 		  // YouTube video tutorial 4eL-Vrj1jNQ
 		
@@ -29,14 +45,4 @@
 </body>
 </html>
 
- 	{
-	  category:  "alimentation",
-	  description: "food stock",
-	  estimation : 600, 
-	  type: "box", 
-	  urgency: "medium",
-	  importance: "comfort",
-	  priority: "medium",
-	  impact: 2,
-	  pourcentage: 20
-	},
+ 
