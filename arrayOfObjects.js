@@ -10,7 +10,7 @@ let expenses = [
 	  importance: "incompressible",
 	  priority: "critical",
 	  impact: 1,
-	  pourcentage: 20
+	  percentage: 20
 	},
  	{
 	  category: "smartDrugs",
@@ -21,7 +21,18 @@ let expenses = [
 	  importance: "primordial",
 	  priority: "critical",
 	  impact: 1,
-	  pourcentage: 20
+	  percentage: 20
+	},
+	{
+	  category: "whey",
+	  description: "proteins",
+	  estimation:  300, 
+	  type: "supplements",
+	  urgency: "high",
+	  importance: "primordial",
+	  priority: "critical",
+	  impact: 1,
+	  percentage: 20
 	},
  	{
 	  category: "micronutriments",
@@ -32,7 +43,7 @@ let expenses = [
 	  importance: "primordial",
 	  priority: "critical",
 	  impact: 1,
-	  pourcentage: 20
+	  percentage: 20
 	},
  	{
 	  category:  "self-storage",
@@ -43,7 +54,7 @@ let expenses = [
 	  importance: "indispensable",
 	  priority: "high",
 	  impact: 2,
-	  pourcentage: 20
+	  percentage: 20
 	},
  	{
 	  category:  "alimentation",
@@ -54,7 +65,7 @@ let expenses = [
 	  importance: "comfort",
 	  priority: "medium",
 	  impact: 2,
-	  pourcentage: 20
+	  percentage: 20
 	},
 	{
 	  category:  "sante",
@@ -65,7 +76,7 @@ let expenses = [
 	  importance: "comfort",
 	  priority: "medium",
 	  impact: 2,
-	  pourcentage: 20
+	  percentage: 20
 	},
  	{
 	  category:  "movingAround",
@@ -76,7 +87,7 @@ let expenses = [
 	  importance: "comfort",
 	  priority: "medium",
 	  impact: 2,
-	  pourcentage: 20
+	  percentage: 20
 	 },
  	{
 	  category:  "healthcare",
@@ -87,18 +98,29 @@ let expenses = [
 	  importance: "comfort",
 	  priority: "medium",
 	  impact: 2,
-	  pourcentage: 20
+	  percentage: 20
 	},
 	{
 	  category:  "gearUpgrade",
-	  description: "high tech and hiking gear"
+	  description: "high tech"
 	  estimation: 500, 
 	  type: "gear", 
 	  urgency: "medium",
 	  importance: "comfort",
 	  priority: "medium",
 	  impact: 2,
-	  pourcentage: 20
+	  percentage: 20
+	},
+	{
+	  category:  "gearUpgrade",
+	  description: "hiking gear"
+	  estimation: 500, 
+	  type: "gear", 
+	  urgency: "medium",
+	  importance: "comfort",
+	  priority: "medium",
+	  impact: 2,
+	  percentage: 20
 	},
  	{
 	  category: "miscellaneous",
@@ -109,7 +131,7 @@ let expenses = [
 	  importance: "comfort",
 	  priority: "medium",
 	  impact: 2, 
-	  pourcentage: 20
+	  percentage: 20
 	},
 ]
 // console.log(expenses[9].estimation);
@@ -118,6 +140,11 @@ let expenses = [
 // retourne une liste numerotée des objets
 
 for (let i = 0; i < expenses.length ; i++)
+  {console.log(i + "." + expenses[i].category ); }
+
+// fait exactement la meme chose que l'exemple ci-dessus
+
+for ( let i in expenses)
   {console.log(i + "." + expenses[i].category ); }
 
 // affiche le nombre d'objets  
@@ -129,12 +156,19 @@ for (var i in expenses) {
 
 for (var i in expenses) {
 	console.log(expenses[i]);
+
+for ( let i of expenses)
+  {console.log(i); }
 }
 // imprime toutes les valeurs de la propriété estimation a la suite
 
 for (var i in expenses) {
 	console.log(expenses[i].estimation);
 }
+
+for ( let i of expenses)
+  {console.log(i.category); }
+
 
 /* YouTube loop example RxjQgIhEPWE, affiche la category et type
  * des depenses dont l'estimation est en dessous de 400€

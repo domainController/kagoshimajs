@@ -1,79 +1,146 @@
 // creating an array of objects
 
 let nootropics = [
+
 	{
-	  category: "racetam",
-	  description: "phenylpiracetam",
-	  price: 47.24,
-	  quantity: 90,
-	  monthlyNeedQuantity: 5,
-	  pricePerServings: "pricePerServingsFX",
-	  dailyPrice: "dailyPriceFX",
-	  monthlyPrice: "monthlyPriceFX",
-	  percentage: "percentageFX",
-	  url: "https://reachgenius.se/en/nootropics/phenylpiracetam.html#/35-amount-90_capsules"
-	},
-	{
-	  category: "racetam",
 	  description: "pramiracetam",
-	  price: 47.24,
-	  quantity: 90,
-	  monthlyNeedQuantity: 15,
+	  category: "racetam",
+	  price: 104,
+	  quantity: 200,
+	  monthlyServingsNeed: 10,
 	  pricePerServings: "pricePerServingsFX",
-	  dailyPrice: "dailyPriceFX",
 	  monthlyPrice: "monthlyPriceFX",
 	  percentage: "percentageFX",
-	  url: "https://reachgenius.se/en/nootropics/phenylpiracetam.html#/35-amount-90_capsules"
+	  url: "https://www.intellimeds.net/pramiracetam/pramiracetam-capsules"
 	},	
 	{
-	  category: "fongi",
 	  description: "lion's mane",
+	  category: "fongi",
 	  price: 47.24,
 	  quantity: 90,
-	  monthlyNeedQuantity: 60,
+	  monthlyServingsNeed: 60,
 	  pricePerServings: "pricePerServingsFX",
-	  dailyPrice: "dailyPriceFX",
 	  monthlyPrice: "monthlyPriceFX",
 	  percentage: "percentageFX",
 	  url: "https://reachgenius.se/en/nootropics/phenylpiracetam.html#/35-amount-90_capsules"
 	},	
 	{
-	  category: "herbal",
 	  description: "theine/caffeine",
+	  category: "herbal",
 	  price: 48,
 	  quantity: 90,
-	  monthlyNeedQuantity: 5,
+	  monthlyServingsNeed: 3,
 	  pricePerServings: "pricePerServingsFX",
-	  dailyPrice: "dailyPriceFX",
 	  monthlyPrice: "monthlyPriceFX",
 	  percentage: "percentageFX",
 	  url: "https://reachgenius.se/en/nootropics/phenylpiracetam.html#/35-amount-90_capsules"
 	},
 	{
-	  category: "cholinergics",
 	  description: "alpha-gpc",
-	  monthlyServingsNeed: 15, 
+	  category: "cholinergics",
 	  price: 37,
 	  quantity: 120,
+	  monthlyServingsNeed: 15, 
 	  pricePerServings: "pricePerServingsFX",
-	  dailyPrice: "dailyPriceFX",
 	  monthlyPrice: "monthlyPriceFX",
 	  percentage: "percentageFX",
 	  url: "https://reachgenius.se/en/nootropics/phenylpiracetam.html#/35-amount-90_capsules"
 	},
-		{
-	  category: "cholinergics",
+	{
 	  description: "choline bitartre",
+	  category: "cholinergics",
 	  price: 37,
 	  quantity: 120,
 	  monthlyServingsNeed: 15, 
 	  pricePerServings: "pricePerServingsFX",
-	  dailyPrice: "dailyPriceFX",
+	  monthlyPrice: "monthlyPriceFX",
+	  percentage: "percentageFX",
+	  url: "https://reachgenius.se/en/nootropics/phenylpiracetam.html#/35-amount-90_capsules"
+	},
+	{
+	  description: "phenylpiracetam",
+	  category: "racetam",
+	  price: 48,
+	  quantity: 90,
+	  monthlyServingsNeed: 10,
+	  pricePerServings: "pricePerServingsFX",
 	  monthlyPrice: "monthlyPriceFX",
 	  percentage: "percentageFX",
 	  url: "https://reachgenius.se/en/nootropics/phenylpiracetam.html#/35-amount-90_capsules"
 	},
 ]
 
-for (var i in nootropics) {
+// retourne le cout de revient du nootroopics par servings:
+
+function pricePerServings(){
+ for (var x in nootropics){
+   var long_pPS = nootropics[x].price / nootropics[x].quantity
+   var round_pPS = long_pPS.toFixed(2)
+   console.log("le prix par servings du" + " " + nootropics[x].description + " " + "est de:" +  " " +round_pPS + "€");
+ }
+}
+
+// retourne le cout de revient du nootroopics au mois:
+
+function monthlyPrice(){
+   for (var x in nootropics){
+     var long_pPS = nootropics[x].price / nootropics[x].quantity
+     var long_mP = nootropics[x].monthlyServingsNeed * long_pPS
+     var round_mP = long_mP.toFixed(2)
+     console.log("le prix de revient mensuel du" + " " + nootropics[x].description + " " + "est de:" +  " " + round_mP + "€");
+   }
+}
+
+// retourne la somme totale de tous les nootropics du tableau:
+
+function sommme(){
+ var somme = 0;
+ for (var x = 0; x < nootropics.length; x++){
+ somme += nootropics[x].price; 
+   }
+  console.log(somme);
+ }
+
+pricePerServings()
+monthlyPrice()
+
+// retourne une liste numerotée des objets
+
+for (let x = 0; x < nootropics.length ; x++)
+  {console.log(x + "." + nootropics[x].category ); }
+
+for ( let x in nootropics)
+  {console.log(x + "." + nootropics[x].category ); }
+
+// affiche le nombre d'objets  
+
+for (var x in nootropics) {
 	console.log(nootropics.length);}
+
+// imprime tous les objets 
+
+for (var x in nootropics) {
+	console.log(nootropics[x]);
+
+for ( let x of nootropics)
+  {console.log(x); }
+}
+// imprime toutes les valeurs de la propriété monthlyServingsNeed a la suite
+
+for (var x in nootropics) {
+	console.log(nootropics[x].monthlyServingsNeed);
+}
+
+for ( let x of nootropics)
+  {console.log(x.monthlyServingsNeed); }
+
+
+/* YouTube loop example RxjQgIhEPWE, affiche la category et type
+ * des depenses dont l'monthlyServingsNeed est en dessous de 400€
+*/
+
+for(x = 0; x < nootropics.length; i++) {
+	if(nootropics[x].monthlyServingsNeed < 400) {
+		console.log(nootropics[x].category + "," + nootropics[x].type)
+	}
+}
