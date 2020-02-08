@@ -1,8 +1,6 @@
  
-  let budget_matrix = [
-
-
- let plane = {
+ 
+  let plane = {
   genre: "flight ticket",
   estimation: 600 
   type: "transportation", 
@@ -19,6 +17,14 @@
 };
 
  let micronutriment = {
+  genre: "vitamins",
+  estimation: 500, 
+  type: "supplements", 
+  importance: "primordial",
+  pourcentage: 20
+};
+
+ let proteins = {
   genre: "vitamins",
   estimation: 500, 
   type: "supplements", 
