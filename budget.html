@@ -9,61 +9,64 @@
 
 <body>
 
-	<h1 id="ObjetDeLaPage">Expenses Categories</h1>
+		<h1 id="ObjetDeLaPage">Expenses Categories</h1>
 
 <div class="gearUpgrade">
 
 		<h2 class="gearUpgrade">Gear</h2>
 
-<ol>
-	<li class="highTech">MacBookPro 17</li>
-	<li class="highTech">Tablet</li>
-	<li class="hiking">Backpack</li>
-	<li class="hiking">Hardshells</li>
-	<li class="hiking">Hammock</li>
-	<li class="hiking">Stove</li>
-</ol>
+			<ol>
+				<li class="highTech">MacBookPro 17</li>
+				<li class="highTech">Tablet</li>
+				<li class="hiking">Backpacks </li>
+				<li class="hiking">Hardshells</li>
+				<li class="hiking">Tents</li>
+				<li class="hiking">Hammock</li>
+				<li class="hiking">Batteries</li>
+			</ol>
 </div>
 
-<div class="servings">
+<div id="supplements">	
+	<div class="servings">
 
-	<h2>Nootropics</h2>
+		<h2>Nootropics</h2>
 
-<ol class="servings">
-	<li>Pramiracetam</li>
-	<li>Phenylpiracetam</li>
-	<li>Noopept</li>
-	<li>Theine|Caffeine</li>
-	<li>Choline</li>
-	<li>Alpha gpc</li>
-</ol>
+			<ol class="servings">
+				<li><a href="https://www.intellimeds.net/pramiracetam/pramiracetam-capsules">Pramiracetam</a></li>
+				<li>Phenylpiracetam</li>
+				<li>Noopept</li>
+				<li>Theine|Caffeine</li>
+				<li>Choline</li>
+				<li>Alpha gpc</li>
+			</ol>
 
-	<h2>Vitamins</h2>
+		<h2>Vitamins</h2>
 
-<ol class="servings">
-	<li>omega 3</li>
-	<li>multivitamins</li>
-	<li>alcar</li>
-	<li>zinc</li>
-	<li>NAC</li>
-	<li>vitamin D3</li>
-	<li>probitotique</li>
-	<li>ALA</li>
-	<li>Mg/K/Calcium</li>
-	<li>melatonin</li>
-	<li>lion's mane</li>
-</ol>
+			<ol class="servings">
+				<li>omega 3</li>
+				<li>multivitamins</li>
+				<li>alcar</li>
+				<li>zinc</li>
+				<li>NAC</li>
+				<li>vitamin D3</li>
+				<li>probitotique</li>
+				<li>ALA</li>
+				<li>Mg/K/Calcium</li>
+				<li>melatonin</li>
+				<li>lion's mane</li>
+			</ol>
 
-	<h2>Proteins</h2>
+		<h2>Proteins</h2>
 
-<ol class="servings">
+			<ol class="servings">
 
-	<li>whey</li>
-	<li>BCAA</li>
-	<li>glutamin</li>
+				<li>whey</li>
+				<li>BCAA</li>
+				<li>glutamin</li>
 
-</ol>
+			</ol>
 
+	</div>
 </div>
 
 </div class="landing">
@@ -104,19 +107,23 @@
 
 	<h2 class="pass">Gym pass</h2>
 
-	<h2>Internet</h2>
-
-	<li class="oneShot">Sim card</li>
-	<li class="monthlyFees0">4G</li>
+	<h2 class="pass">Internet subscription</h2>
 
 	<h2>Additional spendings</h2>
 
-<ol>
-	<li class="monthlyFees1">Laundry</li>
-	<li class="monthlyFees1"> Bank fees</li>
-	<li class="monthlyFees1">YouTube fees</li>
-	
-</ol>
+	<ol>
+		<li class="monthlyFees1">Laundry</li>
+		<li class="monthlyFees1"> Bank fees</li>
+		<li class="monthlyFees1">YouTube fees</li>
+		
+	</ol>
+<script>
+
+	var lien = document.querySelectorAll('.hiking');
+
+	alert('Ma page contient' + ' '+ lien.length + ' ' + 'hiking gear to upgrade');
+
+</script>
 
 </body>
 </html>
