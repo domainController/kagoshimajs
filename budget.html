@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="UTF-8" />
 	<title>Budget</title>
 	<link rel="stylesheet" type="text/css" href="budget.css"/>
 </head>
-
 <body>
-
-		<h1 id="ObjetDeLaPage">Expenses Categories</h1>
-
-<div class="gearUpgrade">
-
-		<h2 class="gearUpgrade">Gear</h2>
-
+	<h1 id="theme">Expenses Categories</h1>
+<div class="categorie">
+	<div class="gear">
+		<h2>Gear</h2>
 			<ol>
 				<li class="highTech">MacBookPro 17</li>
 				<li class="highTech">Tablet</li>
@@ -24,14 +19,10 @@
 				<li class="hiking">Hammock</li>
 				<li class="hiking">Batteries</li>
 			</ol>
-</div>
-
-<div id="supplements">	
-	<div class="servings">
-
+	</div><!--end gear-->
+	<div class="supplements">
 		<h2>Nootropics</h2>
-
-			<ol class="servings">
+			<ol>
 				<li><a href="https://www.intellimeds.net/pramiracetam/pramiracetam-capsules">Pramiracetam</a></li>
 				<li>Phenylpiracetam</li>
 				<li>Noopept</li>
@@ -39,10 +30,8 @@
 				<li>Choline</li>
 				<li>Alpha gpc</li>
 			</ol>
-
 		<h2>Vitamins</h2>
-
-			<ol class="servings">
+			<ol>
 				<li>omega 3</li>
 				<li>multivitamins</li>
 				<li>alcar</li>
@@ -55,75 +44,54 @@
 				<li>melatonin</li>
 				<li>lion's mane</li>
 			</ol>
-
 		<h2>Proteins</h2>
-
-			<ol class="servings">
-
-				<li>whey</li>
+			<ol>
+				<li>Whey</li>
 				<li>BCAA</li>
-				<li>glutamin</li>
-
+				<li>Glutamin</li>
 			</ol>
-
-	</div>
-</div>
-
-</div class="landing">
-
-	<h2 class="landing">Flight Ticket</h2>
-
-	<h2 class="landing">self-storage</h2>
-
-</div>
-
-<div class="supermarket">
-	<h2 class="supermarket">Hygiene</h2>
-
-<ul class="supermarket"> 
-	<li>Laundry</li>
-	<li>Soap</li>
-	<li>Lingettes</li>
-	<li>Dentifrice</li>
-	<li>Deo</li>
-	<li>Febreze</li>
-	<li>Tea tree</li>
-	<li>Coton-tiges</li>
-</ul>
-
-
-	<h2 class="supermarket">Food</h2>
-
-<ul class="supermarket">
-	<li>Pates</li>
-	<li>Sel fume</li>
-	<li>shiitake</li>
-	<li>Huile d'Olive et de Colza</li>
-	<li>Piments</li>
-</ul>
-</div>
-
-	<h2 class="pass">Bus pass</h2>
-
-	<h2 class="pass">Gym pass</h2>
-
-	<h2 class="pass">Internet subscription</h2>
-
-	<h2>Additional spendings</h2>
-
-	<ol>
-		<li class="monthlyFees1">Laundry</li>
-		<li class="monthlyFees1"> Bank fees</li>
-		<li class="monthlyFees1">YouTube fees</li>
-		
-	</ol>
+	</div><!--end supplements-->
+	<div class="landing">
+		<h2>Flight Ticket</h2>
+		<h2>Self-Storage</h2>
+	</div><!--end landing-->
+	<div class="supermarket">
+		<h2>Hygiene</h2>
+			<ul> 
+				<li>Laundry</li>
+				<li>Soap</li>
+				<li>Lingettes</li>
+				<li>Dentifrice</li>
+				<li>Deo</li>
+				<li>Febreze</li>
+				<li>Tea tree</li>
+				<li>Coton-tiges</li>
+			</ul>
+		<h2>Food</h2>
+			<ul>
+				<li>Pates</li>
+				<li>Sel fume</li>
+				<li>shiitake</li>
+				<li>Huile d'Olive et de Colza</li>
+				<li>Piments</li>
+			</ul>
+	</div><!--supermarket-->
+	<div class="pass">
+		<h2>Bus pass</h2>
+		<h2>Gym pass</h2>
+		<h2>Internet</h2>
+	</div><!--pass-->
+	<div class="misc">
+		<h2>Additional spendings</h2>
+			<ol>
+				<li class="monthlyFees1">Laundry</li>
+				<li class="monthlyFees1"> Bank</li>
+				<li class="monthlyFees1">YouTube</li>
+			</ol>
+	</div><!--pass-->
 <script>
-
 	var lien = document.querySelectorAll('.hiking');
-
 	alert('Ma page contient' + ' '+ lien.length + ' ' + 'hiking gear to upgrade');
-
 </script>
-
 </body>
 </html>
