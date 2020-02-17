@@ -7,64 +7,71 @@
 </head>
 <body>
 	<h1 id="theme">Expenses Categories</h1>
-	<form method="post" action="traitement.js">
-		Quel type d'equipement ? <br> <br>
-		<input type="radio" id=hiking name="Gear" value="gear">
-		<label for="Hiking">Hiking</label><br>
-		<input type="radio" id=tech name="Gear" value="Tech">
-		<label for="Tech">Tech</label><br><br>
-		<textarea></textarea>
+
+
 <div class="categorie">
 	<div class="gear">
 		<h2>Gear</h2>
-			<ol>
-				<li class="highTech">MacBookPro 17</li>
-				<li class="highTech">Tablet</li>
-				<li class="hiking">Backpacks </li>
-				<li class="hiking">Hardshells</li>
-				<li class="hiking">Tents</li>
-				<li class="hiking">Hammock</li>
-				<li class="hiking">Batteries</li>
+			<select name="Gear">
+				<optgroup label="Hiking">
+					<option value="Backpacks">Backpacks</option>
+					<option value="Hardshells">Hardshells</option>
+					<option value="Trousers">Trousers</option>
+					<option value="Tent">Tent</option>
+					<option value="Hammock">Hammock</option>
+					<option value="Tarp">Tarp</option>
+				</optgroup>
+				<optgroup label="Tech">
+					<option value="Laptop">Backpacks</option>
+					<option value="Tablet">Hardshells</option>
+					<option value="Powerbanks">Trousers</option>
+	
+				</optgroup>
 			</ol>
-			<p>fegwbigrwh6ujsryj</p>
+			<form method="post" action="traitement.js">
+				Quel type d'equipement ? <br> <br>
+
+				<input type="radio" id=hiking name="Gear" value="gear">
+				<label for="Hiking">Hiking</label><br>
+				<input type="radio" id=tech name="Gear" value="Tech">
+				<label for="Tech">Tech</label><br><br>
+			</form>
 	</div><!--end gear-->
 	<div class="supplementation">
 		<h2>Nootropics</h2>
 			<p class='supplements'>
-				<ol>
-					<li><a href="https://www.intellimeds.net/pramiracetam/pramiracetam-capsules">Pramiracetam</a></li>
-					<li>Phenylpiracetam</li>
-					<li>Noopept</li>
-					<li>Theine|Caffeine</li>
-					<li>Choline</li>
-					<li>Alpha gpc</li>
-				</ol>
-			</p>
-		<h2>Vitamins</h2>
-			<p class='supplements'>
-				<ol>
-					<li>omega 3</li>
-					<li>multivitamins</li>
-					<li>alcar</li>
-					<li>zinc</li>
-					<li>NAC</li>
-					<li>vitamin D3</li>
-					<li>probitotique</li>
-					<li>ALA</li>
-					<li>Mg/K/Calcium</li>
-					<li>melatonin</li>
-					<li>lion's mane</li>
-				</ol>
-			</p>
-		<h2>Proteins</h2>
-			<p class='supplements'>
-				<ol>
-					<li>Whey</li>
-					<li>BCAA</li>
-					<li>Glutamin</li>
-				</ol>
-			</p>
-	</div><!--end supplementation-->
+				
+				List des supplements <br><br>
+
+				<select name="Nootropics">
+					<optgroup label="Nootropics">
+						<option value="Pramiracetam">Pramiracetam</option>
+						<option value="Phenylpiracetam">Phenylpiracetam</option>
+						<option value="Semax">Semax</option>
+						<option value="Noopept">Noopept</option>
+						<option value="Theine">Phenylpiracetam</option>
+						<option value="Choline">Choline Bitrarte</option>
+						<option value="Alpha GPC">Alpha GPC</option>
+					</optgroup>
+					<optgroup label="Vitamins">
+						<option value="omega 3">Omega 3</option>
+						<option value="multivitamins">Multivitamins</option>
+						<option value="alcar">ALCAR</option>
+						<option value="zinc">Zinc</option>
+						<option value="NAC">NAC</option>
+						<option value="vitamin D3">Vitamin D3</option>
+						<option value="probitotique">Probitotique</option>
+						<option value="ALA">ALA</option>
+						<option value="Mg/K/Calcium">Mg/K/Calcium</option>
+						<option value="melatonin">Melatonin</option>
+						<option value="lion's mane">Lion's mane</option>
+					</optgroup>
+					<optgroup label= "Proteins">
+						<option value="Whey">Whey</option>
+						<option value="BCAA">BCAA</option>
+						<option value="glutamin">Glutamin</option>
+				</select>
+
 	<div class="landing">
 		<h2>Flight Ticket</h2>
 			<p>fegwbigrwh6ujsryj</p>
