@@ -3,57 +3,48 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Budget</title>
-	<link rel="stylesheet" type="text/css" href="budget.css"/>
+	<link rel="stylesheet" type="text/css" href="formCategories.css"/>
 </head>
 <body>
 	<h1 id="theme">Expenses Categories</h1>
-
-
 <div class="categorie">
 	<div class="gear">
-		<h2>Gear</h2>
-			<select name="Gear">
-				<optgroup label="Hiking">
-					<option value="Backpacks">Backpacks</option>
-					<option value="Hardshells">Hardshells</option>
-					<option value="Trousers">Trousers</option>
-					<option value="Tent">Tent</option>
-					<option value="Hammock">Hammock</option>
-					<option value="Tarp">Tarp</option>
-				</optgroup>
-				<optgroup label="Tech">
-					<option value="Laptop">Backpacks</option>
-					<option value="Tablet">Hardshells</option>
-					<option value="Powerbanks">Trousers</option>
-	
-				</optgroup>
-			</ol>
-			<form method="post" action="traitement.js">
-				Quel type d'equipement ? <br> <br>
-
-				<input type="radio" id=hiking name="Gear" value="gear">
-				<label for="Hiking">Hiking</label><br>
-				<input type="radio" id=tech name="Gear" value="Tech">
-				<label for="Tech">Tech</label><br><br>
-			</form>
+		<form method="post" action="kagoshimaForm.js">
+			<fieldset id="gear">
+				<legend> Buying Equipement </legend>
+				<select name="Gear">
+					<optgroup label="Hiking">
+						<option value="Backpacks">Backpacks</option>
+						<option value="Hardshells">Hardshells</option>
+						<option value="Trousers">Trousers</option>
+						<option value="Tent">Tent</option>
+						<option value="Hammock">Hammock</option>
+						<option value="Tarp">Tarp</option>
+					</optgroup>
+					<optgroup label="Tech">
+						<option value="Laptop">MacBook</option>
+						<option value="Tablet">Ipad</option>
+						<option value="Powerbanks">PowerBanks</option>
+					</optgroup>
+				</select>
+			</fieldset>
+		</form>
 	</div><!--end gear-->
 	<div class="supplementation">
-		<h2>Nootropics</h2>
-			<p class='supplements'>
-				
-				List des supplements <br><br>
-
-				<select name="Nootropics">
+		<form method="post" action="kagoshimaForm.js">
+			<fieldset id="servings">
+				<legend> Ordering Supplementation <br></legend>
+				<select name="supplementation">
 					<optgroup label="Nootropics">
 						<option value="Pramiracetam">Pramiracetam</option>
 						<option value="Phenylpiracetam">Phenylpiracetam</option>
 						<option value="Semax">Semax</option>
 						<option value="Noopept">Noopept</option>
-						<option value="Theine">Phenylpiracetam</option>
-						<option value="Choline">Choline Bitrarte</option>
+						<option value="Theine">Theine</option>
 						<option value="Alpha GPC">Alpha GPC</option>
 					</optgroup>
 					<optgroup label="Vitamins">
+						<option value="Mg/K/Calcium">Mg/K/Calcium</option>
 						<option value="omega 3">Omega 3</option>
 						<option value="multivitamins">Multivitamins</option>
 						<option value="alcar">ALCAR</option>
@@ -62,7 +53,6 @@
 						<option value="vitamin D3">Vitamin D3</option>
 						<option value="probitotique">Probitotique</option>
 						<option value="ALA">ALA</option>
-						<option value="Mg/K/Calcium">Mg/K/Calcium</option>
 						<option value="melatonin">Melatonin</option>
 						<option value="lion's mane">Lion's mane</option>
 					</optgroup>
@@ -70,49 +60,69 @@
 						<option value="Whey">Whey</option>
 						<option value="BCAA">BCAA</option>
 						<option value="glutamin">Glutamin</option>
-				</select>
-
+					</optgroup>
+				</select><!-- end supplementation -->
+			</fieldset>
+		</form>
+	</div>
 	<div class="landing">
-		<h2>Flight Ticket</h2>
-			<p>fegwbigrwh6ujsryj</p>
-		<h2>Self-Storage</h2>
+		<form method="post" action="kagoshimaForm.js">
+			<fieldset id="landing">
+				<legend> Transitioning <br></legend>
+				<select name="landing">
+					<option value="Flight Ticket">Flight Ticket</option>
+					<option value="Self-Storage">Self-Storage</option>
+				</select>
+			</fieldset>
+		</form>
 	</div><!--end landing-->
 	<div class="supermarket">
-		<h2>Hygiene</h2>
-			<ul> 
-				<li>Laundry</li>
-				<li>Soap</li>
-				<li>Lingettes</li>
-				<li>Dentifrice</li>
-				<li>Deo</li>
-				<li>Febreze</li>
-				<li>Tea tree</li>
-				<li>Coton-tiges</li>
-			</ul>
-		<h2>Food</h2>
-			<ul>
-				<li>Pates</li>
-				<li>Sel fume</li>
-				<li>shiitake</li>
-				<li>Huile d'Olive et de Colza</li>
-				<li>Piments</li>
-			</ul>
-	</div><!--end supermarket-->
+		<form method="post" action="kagoshimaForm.js">
+			<fieldset id="groceries">
+				<legend> Supermarket <br></legend>
+				<select name="supermarket">
+					<optgroup label="Food">
+						<option value="Pates">Pates</option>
+						<option value="Sel fume">Sel Fume</option>
+						<option value="Shiitake">Shiitake</option>
+						<option value="Curry">Curry</option>
+						<option value="Huile d'Olive">Huile d'Olive</option>
+						<option value="Huile de Colza">Huile de Colza</option>
+						<option value="Piments">Piments</option>
+					</optgroup>
+					<optgroup label="Hygiene">
+						<option value="Laundry">Laundry</option>
+						<option value="Soap">Soap</option>
+						<option value="Lingettes">Lingettes</option>
+						<option value="Dentifrice">Dentifrice</option>
+						<option value="Deo">Deo</option>
+						<option value="Febreze">Febreze</option>
+						<option value="Tea tree">Tea Tree</option>
+						<option value="Coton-tiges">Coton-Tiges</option>
+					</optgroup>
+				</select><!-- end supermarket -->
+			</fieldset>
+		</form>
+	</div>
 	<div class="pass">
-		<h2>Bus pass</h2>
-			<p>fegwbigrwh6ujsryj</p>
-		<h2>Gym pass</h2>
-		<h2>Internet</h2>
+		<form method="post" action="kagoshimaForm.js">
+			<fieldset id="monthlyFees">
+				<legend> Recurrent <br></legend>
+				<select name="pass">
+					<optgroup label="Pass">
+						<option value="Bus pass">Bus pass</option>
+						<option value="Gym pass">Gym pass</option>
+						<option value="Internet">Internet</option>
+					</optgroup>
+					<optgroup label="Fees">
+							<option value="Laundry">Laundry</option>
+							<option value="Bank">Bank</option>
+							<option value="YouTube">YouTube</option>
+					</optgroup>
+				</select><!-- end pass -->
+			</fieldset>
+		</form>
 	</div><!--end pass-->
-	<div class="misc">
-		<h2>Additional spendings</h2>
-			<ol>
-				<li class="monthlyFees1">Laundry</li>
-				<li class="monthlyFees1"> Bank</li>
-				<li class="monthlyFees1">YouTube</li>
-			</ol>
-	</div><!--misc-->
-</div><!--end categorie-->
 <script>
 
 var b = document.body;
@@ -129,82 +139,6 @@ alert(texte);
 </body>
 </html>
 
-<!-- Travail sur le DOM via 17/02 COURS COMPLET JAVASCRIPT [33/65] - Accéder à des éléments HTML en JavaScript https://www.youtube.com/watch?v=trO063YQbCs -->
-
-<!--
-	var titre_page = document.title ;
-	var page = document.body;
-	var lien = document.links;
-	alert('Contenu de titre_page : ' + ' '+ titre_page +
-		'\nContenu de page : ' + ' ' + page +
-		'\nContenu de page : ' + ' ' + lien);
+<!-- COURS COMPLET HTML ET CSS [63/71] - Organiser et mettre en forme un formulaire
+	https://www.youtube.com/watch?v=jtmaFUs-HVw&t=398s
 -->
-
-
-<!-- COURS COMPLET JAVASCRIPT [34/65] le 17/02 l'apres-midi bibliotheque centrale de Dublin
-
-var theme = document.getElementById('theme');
-
-var texte_theme = theme.innerHTML
-
-var textePara = document.querySelector('.supplements').textContent;
-
-alert('Theme :' + ' ' + texte_theme +
-	'\nParagraphe 1 :' + ' ' + textePara) ;
-
-	document.getElementById('theme').innerHTML = '<mark> Kagoshima Expenses Types </mark>';
-
-	document.querySelector('a').href = 'http://wikipedia.org';
-
-	document.querySelector('.supermarket').className = 'groceries';
-
-	document.getElementById('theme').style.color = 'lightblue';
-	document.getElementById('theme').style.backgroundColor = 'blue';
-	document.getElementById('theme').style.fontSize = '40px';
--->
-
-<!-- COURS COMPLET JAVASCRIPT [35/65] le 17/02 l'apres-midi 
-	creation d'objet HTML via Javascript
-
-J'ai reussi ajouter du texte a lin fin mais pas a un endroit precis 
-	var synonyms = document.createElement('p');
-synonyms.id = 'nouveau';
-
-var contenu = document.createTextNode('smart drugs or cognitive ehancers');
-
-synonyms.appendChild(contenu);
-
-var para1 = document.querySelector('.supplements');
-
-document.body.insertBefore(synonyms, para1);
--->
-
-<!-- COURS COMPLET JAVASCRIPT [36/65] le 17/02 l'apres-midi 
-	creation d'objet HTML via Javascript
-
-suppression d'elements
-
-var titre = document.getElementById('theme');
-var parent = document.body;
-parent.removeChild(titre);
-
-remplacement de titres :
-
-var titre = document.getElementById('theme');
-var parent = document.body;
-
-var nouveauTitre = document.createElement('h2');
-nouveauTitre.id = 'titre_moyen';
-nouveauTitre.innerHTML = 'Categories des Depenses';
-
-parent.replaceChild(nouveauTitre, titre);
-
--->
-
-<!-- COURS COMPLET JAVASCRIPT [37/65] le 17/02 l'apres-midi 
-	creation d'objet HTML via Javascript
-
-var p = document.querySelector('.supplements');
-var div = p.parentNode ;
-
-div.style.backgroundColor = 'orange';
