@@ -1,7 +1,7 @@
 // creating an array of objects
 
-let nootropics = [
-
+let nootropics = 
+[
 	{
 	  description: "pramiracetam",
 	  category: "racetam",
@@ -11,14 +11,14 @@ let nootropics = [
 	  pricePerServings: "pricePerServingsFX",
 	  monthlyPrice: "monthlyPriceFX",
 	  percentage: "percentageFX",
-	  url: "https://www.intellimeds.net/pramiracetam/pramiracetam-capsules"
-	},	
+	  url: "https://www.intellimeds.net/pramiracetam/pramiracetam-capsules",
+	},
 	{
 	  description: "semax",
 	  category: "peptides",
 	  price: 22,
 	  quantity: 60,
-	  monthlyServingsNeed: ,
+	  monthlyServingsNeed: 
 	  pricePerServings: "pricePerServingsFX",
 	  monthlyPrice: "monthlyPriceFX",
 	  percentage: "percentageFX",
@@ -44,7 +44,7 @@ let nootropics = [
 	  pricePerServings: "pricePerServingsFX",
 	  monthlyPrice: "monthlyPriceFX",
 	  percentage: "percentageFX",
-	  url: "*"
+	  url: "https://reachgenius.se/en/nootropics/phenylpiracetam.html#/35-amount-90_capsules"
 	},
 	{
 	  description: "lion's mane",
@@ -90,18 +90,17 @@ let nootropics = [
 	  percentage: "percentageFX",
 	  url: "https://reachgenius.se/en/nootropics/phenylpiracetam.html#/35-amount-90_capsules"
 	},
-        {
-          description: "melatonin",
-          category: "herbal",
-          price: 48,
-          quantity: 90,
-          monthlyServingsNeed: 3,
-          pricePerServings: "pricePerServingsFX",
-          monthlyPrice: "monthlyPriceFX",
-          percentage: "percentageFX",
-          url: "https://reachgenius.se/en/nootropics/phenylpiracetam.html#/35-amount-90_capsules"
-        },
-
+    {
+      description: "melatonin",
+      category: "herbal",
+      price: 48,
+      quantity: 90,
+      monthlyServingsNeed: 3,
+      pricePerServings: "pricePerServingsFX",
+      monthlyPrice: "monthlyPriceFX",
+      percentage: "percentageFX",
+      url: "https://reachgenius.se/en/nootropics/phenylpiracetam.html#/35-amount-90_capsules"
+    }
 ]
 
 // calcul de la somme totale

@@ -5,8 +5,8 @@ let micronutriments = [
 	{
 	  description: "Multivitamins",
 	  category:
-	  price: ,
-	  quantity: ,
+	  price: 12,
+	  quantity:
 	  monthlyServingsNeed: 10,
 	  pricePerServings:
 	  monthlyPrice:
@@ -112,7 +112,7 @@ let micronutriments = [
 	  percentage:
 	  url:
 	},
-]
+];
 
 // retourne le cout de revient du nootroopics par servings:
 
@@ -120,7 +120,7 @@ function pricePerServings(){
  for (var x in nootropics){
    var long_pPS = nootropics[x].price / nootropics[x].quantity
    var round_pPS = long_pPS.toFixed(2)
-   console.log("le prix par servings du" + " " + nootropics[x].description + " " + "est de:" +  " " +round_pPS + "€");
+   console.table("le prix par servings du" + " " + nootropics[x].description + " " + "est de:" +  " " +round_pPS + "€");
  }
 }
 

@@ -2,8 +2,8 @@
  
 let expenses = [
 	{
-	  category: "plane",
 	  description: "flight ticket",
+	  category: "transitioning",
 	  estimation: 600,
 	  type: "transportation", 
 	  urgency: "critical",
@@ -13,8 +13,8 @@ let expenses = [
 	  percentage: 20
 	},
  	{
-	  category: "smartDrugs",
 	  description: "nootropics",
+	  category: "ordering supplementation",
 	  estimation:  300, 
 	  type: "supplements",
 	  urgency: "high",
@@ -24,8 +24,8 @@ let expenses = [
 	  percentage: 20
 	},
 	{
-	  category: "whey",
 	  description: "proteins",
+	  category: "ordering supplementation",
 	  estimation:  300, 
 	  type: "supplements",
 	  urgency: "high",
@@ -35,8 +35,8 @@ let expenses = [
 	  percentage: 20
 	},
  	{
-	  category: "micronutriments",
 	  description: "vitamins",
+	  category: "ordering supplementation",
 	  estimation: 500, 
 	  type: "supplements",
 	  urgency: "high",
@@ -46,10 +46,10 @@ let expenses = [
 	  percentage: 20
 	},
  	{
-	  category:  "self-storage",
-	  description: "box rent",
+	  description: "self-storage",
+	  category:  "transitioning",
 	  estimation: 600,
-	  type: "logement",
+	  type: "accomodation",
 	  urgency: "medium", 
 	  importance: "indispensable",
 	  priority: "high",
@@ -57,8 +57,8 @@ let expenses = [
 	  percentage: 20
 	},
  	{
-	  category:  "alimentation",
 	  description: "food stock",
+	  category:  "supermarket",
 	  estimation : 600, 
 	  type: "box", 
 	  urgency: "medium",
@@ -68,10 +68,10 @@ let expenses = [
 	  percentage: 20
 	},
 	{
-	  category:  "sante",
 	  description: "hygiene",
+	  category:  "supermarket",
 	  estimation : 600, 
-	  type: "box", 
+	  type: "healthcare", 
 	  urgency: "medium",
 	  importance: "comfort",
 	  priority: "medium",
@@ -79,8 +79,8 @@ let expenses = [
 	  percentage: 20
 	},
  	{
-	  category:  "movingAround",
 	  description: "bus pass",
+	  category:  "recurrent ",
 	  estimation: 700, 
 	  type: "transportation", 
 	  urgency: "medium",
@@ -90,10 +90,10 @@ let expenses = [
 	  percentage: 20
 	 },
  	{
-	  category:  "healthcare",
-	  description: "gym pass",
+	  description: "gym membership",
+	  category:  "recurrent",
 	  estimation: 350, 
-	  type: "hygiene", 
+	  type: "healthcare", 
 	  urgency: "medium",
 	  importance: "comfort",
 	  priority: "medium",
@@ -101,8 +101,8 @@ let expenses = [
 	  percentage: 20
 	},
 	{
-	  category:  "gearUpgrade",
-	  description: "high tech",
+	  category:  "buying equipment",
+	  description: "tech",
 	  estimation: 700,
 	  type: "gear", 
 	  urgency: "medium",
@@ -112,8 +112,8 @@ let expenses = [
 	  percentage: 20
 	},
 	{
-	  category:  "gearUpgrade",
-	  description: "hiking gear",
+	  description: "hiking",
+	  category:  "buying equipment",
 	  estimation: 500, 
 	  type: "gear", 
 	  urgency: "medium",
@@ -123,8 +123,8 @@ let expenses = [
 	  percentage: 20
 	},
  	{
-	  category: "miscellaneous",
-	  description: "misc",
+	  description: "fees",
+	  category: "recurrent",
 	  estimation: 200, 
 	  type: "divers", 
 	  urgency: "medium",
@@ -139,7 +139,7 @@ let expenses = [
 // imprime tous les objets 
 
  for (var i in expenses) {
- console.table(expenses[i]);
+ console.log(expenses[i]);
 }
 
 // for ( let i of expenses){
@@ -152,7 +152,7 @@ let expenses = [
 // retourne une liste numerotée des objets
 
 for (let i = 0; i < expenses.length ; i++)
-  {console.log(i + "." + expenses[i].category ); }
+  {console.table(i + "." + expenses[i].category ); }
 
 /*
 // fait exactement la meme chose que l'exemple ci-dessus
