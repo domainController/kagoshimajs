@@ -8,9 +8,10 @@ let nootropics =
 	  price: 104,
 	  quantity: 200,
 	  monthlyServingsNeed: 10,
-	  pricePerServings: "pricePerServingsFX",
-	  monthlyPrice: "monthlyPriceFX",
-	  percentage: "percentageFX",
+	  pricePerServings: null,
+	  monthlyPrice: null,
+	  percentage: null,
+	  site: intellimeds
 	  url: "https://www.intellimeds.net/pramiracetam/pramiracetam-capsules",
 	},
 	{
@@ -19,9 +20,9 @@ let nootropics =
 	  price: 22,
 	  quantity: 60,
 	  monthlyServingsNeed: 
-	  pricePerServings: "pricePerServingsFX",
-	  monthlyPrice: "monthlyPriceFX",
-	  percentage: "percentageFX",
+	  pricePerServings: null,
+	  monthlyPrice: null,
+	  percentage: null,
 	  url: "https://reachgenius.se/en/nootropics/semax.html"
 	},
 	{
@@ -30,21 +31,21 @@ let nootropics =
 	  price: 48,
 	  quantity: 90,
 	  monthlyServingsNeed: 10,
-	  pricePerServings: "pricePerServingsFX",
-	  monthlyPrice: "monthlyPriceFX",
-	  percentage: "percentageFX",
+	  pricePerServings: null,
+	  monthlyPrice: null,
+	  percentage: null,
 	  url: "https://reachgenius.se/en/nootropics/phenylpiracetam.html#/35-amount-90_capsules"
 	},	
 	{
 	  description: "noopept",
 	  category: "racetam",
-	  price: 22,
-	  quantity: 60,
-	  monthlyServingsNeed: ,
-	  pricePerServings: "pricePerServingsFX",
-	  monthlyPrice: "monthlyPriceFX",
-	  percentage: "percentageFX",
-	  url: "https://reachgenius.se/en/nootropics/phenylpiracetam.html#/35-amount-90_capsules"
+	  price: 44,
+	  quantity: 100,
+	  monthlyServingsNeed: 5,
+	  pricePerServings: null,
+	  monthlyPrice: null,
+	  percentage: null,
+	  url: "https://www.intellimeds.net/noopept-tablets-20mg"
 	},
 	{
 	  description: "lion's mane",
@@ -52,9 +53,9 @@ let nootropics =
 	  price: 48,
 	  quantity: 90,
 	  monthlyServingsNeed: 60,
-	  pricePerServings: "pricePerServingsFX",
-	  monthlyPrice: "monthlyPriceFX",
-	  percentage: "percentageFX",
+	  pricePerServings: null,
+	  monthlyPrice: null,
+	  percentage: null,
 	  url: "https://reachgenius.se/en/nootropics/phenylpiracetam.html#/35-amount-90_capsules"
 	},	
 	{
@@ -63,9 +64,9 @@ let nootropics =
 	  price: 48,
 	  quantity: 90,
 	  monthlyServingsNeed: 3,
-	  pricePerServings: "pricePerServingsFX",
-	  monthlyPrice: "monthlyPriceFX",
-	  percentage: "percentageFX",
+	  pricePerServings: null,
+	  monthlyPrice: null,
+	  percentage: null,
 	  url: "https://reachgenius.se/en/nootropics/phenylpiracetam.html#/35-amount-90_capsules"
 	},
 	{
@@ -74,9 +75,9 @@ let nootropics =
 	  price: 37,
 	  quantity: 120,
 	  monthlyServingsNeed: 15, 
-	  pricePerServings: "pricePerServingsFX",
-	  monthlyPrice: "monthlyPriceFX",
-	  percentage: "percentageFX",
+	  pricePerServings: null,
+	  monthlyPrice: null,
+	  percentage: null,
 	  url: "https://reachgenius.se/en/nootropics/phenylpiracetam.html#/35-amount-90_capsules"
 	},
 	{
@@ -85,9 +86,9 @@ let nootropics =
 	  price: 37,
 	  quantity: 120,
 	  monthlyServingsNeed: 15, 
-	  pricePerServings: "pricePerServingsFX",
-	  monthlyPrice: "monthlyPriceFX",
-	  percentage: "percentageFX",
+	  pricePerServings: null,
+	  monthlyPrice: null,
+	  percentage: null,
 	  url: "https://reachgenius.se/en/nootropics/phenylpiracetam.html#/35-amount-90_capsules"
 	},
     {
@@ -96,9 +97,9 @@ let nootropics =
       price: 48,
       quantity: 90,
       monthlyServingsNeed: 3,
-      pricePerServings: "pricePerServingsFX",
-      monthlyPrice: "monthlyPriceFX",
-      percentage: "percentageFX",
+      pricePerServings: null,
+      monthlyPrice: null,
+      percentage: null,
       url: "https://reachgenius.se/en/nootropics/phenylpiracetam.html#/35-amount-90_capsules"
     }
 ]
