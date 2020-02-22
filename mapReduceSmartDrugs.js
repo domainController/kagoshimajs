@@ -1,6 +1,4 @@
-
-    let sortDirection = false;
-	let smartDrugs = 
+let smartDrugs = 
 [
 	{
 	  description: "pramiracetam",
@@ -119,37 +117,4 @@
       site: "amazon.com",
       url: "https://www.amazon.com/gp/product/B0019LTGC2/ref=ox_sc_act_title_1?smid=A249CL9PVB6VZW&psc=1"
     }
-];
-
-	window.onload = () => {
-		loadTableData(smartDrugs);
-	};
-
-    function loadTableData(smartDrugs){
-	const tableBody = document.getElementById('smartDrugs');
-	let dataHtml = '';
-
-	for(let order of smartDrugs) {
-		dataHtml += 		
-			`<tr>
-				<td>${order.description}</td>
-				<td>${order.category}</td>
-				<td>${order.price}</td>
-				<td>${order.quantity}</td>
-				<td>${order.monthlyServingsNeed}</td>
-				<td>${order.costPerServing}</td>
-				<td>${order.productLifetime}</td>
-				<td>${order.monthlyCost}</td>
-				<td>${order.percentage}</td>
-				<td>${order.site}</td>
-				<td>${order.url}</td>
-			</tr>`
-	}
-
-	console.log(dataHtml);
-	tableBody.innerHTML = dataHtml;
-}
-
-
-// YouTube video Build a Dynamic Table with Sorting | HTML, CSS & JavaScript Frontend Mini Projects | Dylan Israel
-// YouTube video https://www.youtube.com/watch?v=ri5Nqe_IK50
+]
