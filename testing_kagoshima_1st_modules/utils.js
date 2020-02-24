@@ -3,11 +3,11 @@
 
     {
 		const tableBody = document.getElementById('smartDrugs');
-		let nootropicsMatrixContent = '';
+		let matrixContent = '';
 
 		for(let order of smartDrugs) 
 		{
-			nootropicsMatrixContent += 
+			matrixContent += 
 			`<tr>
 				<td>${order.description}</td>
 				<td>${order.category}</td>
@@ -23,6 +23,6 @@
 			</tr>`
 		}
 
-		console.log(nootropicsMatrixContent);
-		tableBody.innerHTML = nootropicsMatrixContent;
+		console.log(matrixContent);
+		tableBody.innerHTML = matrixContent;
 	}

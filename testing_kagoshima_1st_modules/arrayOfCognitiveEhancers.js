@@ -120,5 +120,5 @@ export let smartDrugs =
 	      site: "amazon.com",
 	      url: "https://www.amazon.com/gp/product/B0019LTGC2/ref=ox_sc_act_title_1?smid=A249CL9PVB6VZW&psc=1"
 	    }
-	]
+	];
 
