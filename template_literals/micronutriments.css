@@ -17,7 +17,7 @@ img {
   font-size: 2.6rem;
 }
 
-.animal {
+.vitamin {
   max-width: 650px;
   padding: 20px;
   margin: 30px auto;
@@ -26,23 +26,23 @@ img {
   overflow: hidden;
 }
 
-.animal h4 {
+.vitamin h4 {
   margin: 0 0 6px 0;
 }
 
-.pet-photo {
+.vitamin-photo {
   float: left;
   width: 40%;
   margin-right: 15px;
 }
 
-.pet-name {
+.vitamin-name {
   font-size: 2rem;
   font-weight: normal;
   margin: 0 0 1rem 0;
 }
 
-.species {
+.price {
   font-size: .9rem;
   color: #888;
   vertical-align: middle;

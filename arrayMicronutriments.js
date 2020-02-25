@@ -8,7 +8,7 @@ let micronutriments = [
 	  price: 12,
 	  quantity:
 	  monthlyServingsNeed: 10,
-	  pricePerServings:
+	  costPerServing:
 	  monthlyPrice:
 	  percentage:
 	  url:
@@ -19,7 +19,7 @@ let micronutriments = [
 	  price: 47.24,
 	  quantity: 90,
 	  monthlyServingsNeed: 60,
-	  pricePerServings:
+	  costPerServing:
 	  monthlyPrice:
 	  percentage:
 	  url:
@@ -30,7 +30,7 @@ let micronutriments = [
 	  price: 48,
 	  quantity: 90,
 	  monthlyServingsNeed: 3,
-	  pricePerServings:
+	  costPerServing:
 	  monthlyPrice:
 	  percentage:
 	  url:
@@ -41,7 +41,7 @@ let micronutriments = [
 	  price: 37,
 	  quantity: 120,
 	  monthlyServingsNeed: 15, 
-	  pricePerServings:
+	  costPerServing:
 	  monthlyPrice:
 	  percentage:
 	  url:
@@ -52,7 +52,7 @@ let micronutriments = [
 	  price: 37,
 	  quantity: 120,
 	  monthlyServingsNeed: 15, 
-	  pricePerServings:
+	  costPerServing:
 	  monthlyPrice:
 	  percentage:
 	  url:
@@ -63,7 +63,7 @@ let micronutriments = [
 	  price: 48,
 	  quantity: 90,
 	  monthlyServingsNeed: 10,
-	  pricePerServings:
+	  costPerServing:
 	  monthlyPrice:
 	  percentage:
 	  url:
@@ -74,7 +74,7 @@ let micronutriments = [
 	  price: 37,
 	  quantity: 120,
 	  monthlyServingsNeed: 15, 
-	  pricePerServings:
+	  costPerServing:
 	  monthlyPrice:
 	  percentage:
 	  url:
@@ -85,7 +85,7 @@ let micronutriments = [
 	  price: 37,
 	  quantity: 120,
 	  monthlyServingsNeed: 15, 
-	  pricePerServings:
+	  costPerServing:
 	  monthlyPrice:
 	  percentage:
 	  url:
@@ -96,7 +96,7 @@ let micronutriments = [
 	  price: 37,
 	  quantity: 120,
 	  monthlyServingsNeed: 15, 
-	  pricePerServings:
+	  costPerServing:
 	  monthlyPrice:
 	  percentage:
 	  url:
@@ -107,7 +107,7 @@ let micronutriments = [
 	  price: 37,
 	  quantity: 120,
 	  monthlyServingsNeed: 15, 
-	  pricePerServings:
+	  costPerServing:
 	  monthlyPrice:
 	  percentage:
 	  url:
@@ -116,7 +116,7 @@ let micronutriments = [
 
 // retourne le cout de revient du nootroopics par servings:
 
-function pricePerServings(){
+function costPerServing(){
  for (var x in nootropics){
    var long_pPS = nootropics[x].price / nootropics[x].quantity
    var round_pPS = long_pPS.toFixed(2)
@@ -145,7 +145,7 @@ function sommme(){
   console.log(somme);
  }
 
-pricePerServings()
+costPerServing()
 monthlyPrice()
 
 // retourne une liste numerotée des objets
