@@ -8,18 +8,18 @@ buildTable(expensesCategories)
 	function buildTable(expensesCategories){
 		var table = document.getElementById('myTable')
 
-		for (let purchase of expensesCategories)
+		for (let purchaseDomain of expensesCategories)
 		{
 			var row = `<tr>
-							<td>${purchase.description}</td>
-							<td>${purchase.category}</td>
-							<td>${purchase.estimation}</td>
-							<td>${purchase.type}</td>
-							<td>${purchase.urgency}</td>
-							<td>${purchase.importance}</td>
-							<td>${purchase.priority}</td>
-							<td>${purchase.impact}</td>
-							<td>${purchase.percentage}</td>
+							<td>${purchaseDomain.description}</td>
+							<td>${purchaseDomain.category}</td>
+							<td>${purchaseDomain.estimation}</td>
+							<td>${purchaseDomain.type}</td>
+							<td>${purchaseDomain.urgency}</td>
+							<td>${purchaseDomain.importance}</td>
+							<td>${purchaseDomain.priority}</td>
+							<td>${purchaseDomain.impact}</td>
+							<td>${purchaseDomain.percentage}</td>
 					  </tr>`
 			table.innerHTML += row
 		}
