@@ -2,7 +2,7 @@ export const micronutriments = [
 	{
 	  description: "Multivitamins",
 	  price: 28,
-	  quantity: 180,
+	  servings: 180,
 	  monthlyServingsNeed: 30,
 	  pricePerServings: null,
 	  productLifetime: null,
@@ -14,7 +14,7 @@ export const micronutriments = [
 	{
 	  description: "Magnesium",
 	  price: 12,
-	  quantity: 500,
+	  servings: 500,
 	  monthlyServingsNeed: 90, 
 	  pricePerServings: null,
 	  productLifetime: null,
@@ -26,7 +26,7 @@ export const micronutriments = [
 	{
 	  description: "Potassium",
 	  price: 9,
-	  quantity: 500,
+	  servings: 500,
 	  monthlyServingsNeed: 60, 
 	  pricePerServings: null,
 	  productLifetime: null,
@@ -38,7 +38,7 @@ export const micronutriments = [
 	{
 	  description: "Calcium",
 	  price: 23,
-	  quantity: 1000,
+	  servings: 1000,
 	  monthlyServingsNeed: 60, 
 	  pricePerServings: null,
 	  productLifetime: null,
@@ -50,7 +50,7 @@ export const micronutriments = [
 	{
 	  description: "Omega 3",
 	  price: 21,
-	  quantity: 180,
+	  servings: 180,
 	  monthlyServingsNeed: 120,
 	  pricePerServings: null,
 	  productLifetime: null,
@@ -62,7 +62,7 @@ export const micronutriments = [
 	{
 	  description: "Vitamin D3",
 	  price: 8,
-	  quantity: 120,
+	  servings: 120,
 	  monthlyServingsNeed: 30,
 	  pricePerServings: null,
 	  productLifetime: null,
@@ -74,7 +74,7 @@ export const micronutriments = [
 	{
 	  description: "Zinc",
 	  price: 7,
-	  quantity: 100,
+	  servings: 100,
 	  monthlyServingsNeed: 30, 
 	  pricePerServings: null,
 	  productLifetime: null,
@@ -86,7 +86,7 @@ export const micronutriments = [
 	{
 	  description: "Carnitine",
 	  price: 30,
-	  quantity: 100,
+	  servings: 100,
 	  monthlyServingsNeed: 30,
 	  pricePerServings: null,
 	  productLifetime: null,
@@ -98,7 +98,7 @@ export const micronutriments = [
 	{
 	  description: "CoQ10",
 	  price: 12,
-	  quantity: 120,
+	  servings: 120,
 	  monthlyServingsNeed: 30, 
 	  pricePerServings: null,
 	  productLifetime: null,
@@ -110,7 +110,7 @@ export const micronutriments = [
 	{
 	  description: "NAC",
 	  price: 10,
-	  quantity: 60,
+	  servings: 60,
 	  monthlyServingsNeed: 30,
 	  pricePerServings: null,
 	  productLifetime: null,
@@ -122,7 +122,7 @@ export const micronutriments = [
 	{
 	  description: "ALA",
 	  price: 10,
-	  quantity: 60,
+	  servings: 60,
 	  monthlyServingsNeed: 30, 
 	  pricePerServings: null,
 	  productLifetime: null,

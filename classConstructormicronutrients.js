@@ -13,31 +13,31 @@ class Supplement {
 		this.photo				= photo; 
 	}
 
-	pricePerServing(){ // 1- PRICE PER SERVING (price/servings)
+	getPricePerServing(){ // 1- PRICE PER SERVING (price/servings)
 		return ((this.price / this.servings).toFixed(2));
 	}
 
-	productLifetime(){ // 2
-		var rawProductLifetime = this.monthlyServingsNeed * this.servings;
+	getProductLifetime(){ // 2 HOW LONG THE PRODUCT WOULD LAST
 
+		var rawProductLifetime = this.monthlyServingsNeed * this.servings;
+		return moment.duration(rawProductLifetime, "months").humanize(true);
 	}
 	
-	monthlyCost(){ // 3- COST PER MONTH
-		return (pricePerServing() * this.monthlyServingsNeed)
+	getMonthlyCost(){ // 3- COST PER MONTH
+		return (this.pricePerServing() * this.monthlyServingsNeed)
 	}
 
-	percentage(){ // 4- PERCENTAGE AMONG ALL SUPPLEMENTATIONS
+	getPercentage(){ // 4- PERCENTAGE AMONG ALL SUPPLEMENTATIONS
 
 		var SupplementationTotalSum = supplement.reduce((total, article) => total + article.price, 0);
 		return (((this.price / SupplementationTotalSum )*100).toFixed(1));
 		console.table(percentage + "%");
 	}
 
-	nextPurchaseDate(){ // 5- HOW TO FIND THE END OF USE (DATE) OF THE ORDER
+	getNextPurchaseDate(){ // 5- WHEN THE PRODUCT WILL BE OVER
 
 		var nextPurchaseDate_UglyFormat = moment().add(180, 'days').calendar();
 		var nextPurchaseDate_NiceFormat = moment(new Date(nextPurchaseDate_UglyFormat)).format('DD MMM');
-
 	}
 }
 
