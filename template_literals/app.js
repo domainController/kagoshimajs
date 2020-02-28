@@ -11,13 +11,12 @@ export function vitaminTemplate(vitamin)
 		<p><strong>Lifetime:</strong>${humanizeProductLifetime(vitamin.productLifetime)}</p>
 	</div>
 	` 
-}
+};
 
-export function humanizeProductLifetime ()
+export function humanizeProductLifetime()
 
 {
-	let 
-    moment.duration(${productLifetime}, "months").humanize();
+    moment.duration(${vitamin.productLifetime}, "months").humanize();
 }
 
 /*

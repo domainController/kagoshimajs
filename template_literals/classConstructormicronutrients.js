@@ -11,54 +11,39 @@ class Supplement {
 		this.url  		   		= url; 
 		this.site				= site; 
 		this.photoUrl			= photoUrl; 
-	}
 
-// COSTS:
-
-	getPricePerServing(){ // PRICE PER SERVING (price/servings)
-		return ((this.price / this.servings).toFixed(2));
-	}
-
-		getMonthlyCost(){ // COST PER MONTH
-		return (this.getPricePerServing() * this.monthlyServingsNeed)
-	}
-
-// LIFETIME:
-
-	getProductLifetime(){ // HOW LONG THE PRODUCT WOULD LAST
-
-		var rawProductLifetime = this.monthlyServingsNeed * this.servings;
-		return moment.duration(rawProductLifetime, "months").humanize(true);
-
-	}
-	
-	getNextPurchaseDate(){ // WHEN THE PRODUCT WILL BE OVER
-
-		var nextPurchaseDate_UglyFormat = moment().add(this.rawProductLifetime, 'days').calendar();
-		var nextPurchaseDate_NiceFormat = moment(new Date(nextPurchaseDate_UglyFormat)).format('DD MMM');
-		return nextPurchaseDate_NiceFormat;
-	}
-
-	getLifetime(){ // DISPLAYS
-		console.log( "Lifetime:" + " " + humanizedProductLifetime + " " + "(" +  nextPurchaseDate_NiceFormat + ")");
-	}
-
-// PERCENTAGE
-
-	getPercentage(){ // PERCENTAGE AMONG ALL SUPPLEMENTATIONS
-
+		this.getPricePerServing() = function() { // PRICE PER SERVING (price/servings)
+			return ((this.price / this.servings).toFixed(2));
+		}
+		this.getMonthlyCost() = function() { // COST PER MONTH
+			return (this.getPricePerServing() * this.monthlyServingsNeed)
+		}
+		this.getProductLifetime() = function() { // HOW LONG THE PRODUCT WOULD LAST
+			var rawProductLifetime = this.monthlyServingsNeed * this.servings;
+			var humanizedProductLifetime = moment.duration(rawProductLifetime, "months").humanize(true);
+			return humanizedProductLifetime;
+		}
+		this.getNextPurchaseDate() = function() { // WHEN THE PRODUCT WILL BE OVER
+			var nextPurchaseDate_UglyFormat = moment().add(this.rawProductLifetime, 'days').calendar();
+			var nextPurchaseDate_NiceFormat = moment(new Date(nextPurchaseDate_UglyFormat)).format('DD MMM');
+			return nextPurchaseDate_NiceFormat;
+		}
+		this.displayLifetime() = function() { // DISPLAYS
+		return `Lifetime: ${humanizedProductLifetime} (${nextPurchaseDate_NiceFormat})`
+		}
+		this.getPercentage() = function() { // PRICE PERCENTAGE AMONG ALL SUPPLEMENTS
 		var supplementationTotalSum = supplement.reduce((total, article) => total + article.price, 0);
 		var percentage = (((this.price / supplementationTotalSum )*100).toFixed(1));
-		console.log(percentage + "%");
+		return `${percentage}%`
 	}
 }
 
-// 2 INSTANCES
+// 2 INSTANCES FOR TESTS
 
 let Mg = new Supplement('Magnesium', 12, 500, 90, null, 'amazon.co.uk', null)
 let D3 = new Supplement('Vitamin D3', 8, 120, 30, null, 'iHerb', null)
 
-// EXAMPLES
+// 2 EXAMPLES FROM OLD ARRAY WITH NON UPDATED PROPERTIES
 
 /*
 	{
