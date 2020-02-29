@@ -1,8 +1,8 @@
-// creating an array of objects
+import * as moment from './moment/moment.min.js';
 
 class Supplement {
 
-	constructor(description, price, servings, monthlyServingsNeed, url, site, photo) {
+	constructor(description, price, servings, monthlyServingsNeed, url, site, photoUrl) {
 
 		this.description   		= description;
 		this.price 		   		= price;
@@ -10,36 +10,40 @@ class Supplement {
 		this.monthlyServingsNeed = monthlyServingsNeed;
 		this.url  		   		= url; 
 		this.site				= site; 
-		this.photo				= photo; 
-	}
+		this.photoUrl			= photoUrl; 
 
-	getPricePerServing(){ // 1- PRICE PER SERVING (price/servings)
-		return ((this.price / this.servings).toFixed(2));
-	}
-
-	getProductLifetime(){ // 2 HOW LONG THE PRODUCT WOULD LAST
-
-		var rawProductLifetime = this.monthlyServingsNeed * this.servings;
-		return moment.duration(rawProductLifetime, "months").humanize(true);
-	}
-	
-	getMonthlyCost(){ // 3- COST PER MONTH
-		return (this.pricePerServing() * this.monthlyServingsNeed)
-	}
-
-	getPercentage(){ // 4- PERCENTAGE AMONG ALL SUPPLEMENTATIONS
-
-		var SupplementationTotalSum = supplement.reduce((total, article) => total + article.price, 0);
-		return (((this.price / SupplementationTotalSum )*100).toFixed(1));
-		console.table(percentage + "%");
-	}
-
-	getNextPurchaseDate(){ // 5- WHEN THE PRODUCT WILL BE OVER
-
-		var nextPurchaseDate_UglyFormat = moment().add(180, 'days').calendar();
-		var nextPurchaseDate_NiceFormat = moment(new Date(nextPurchaseDate_UglyFormat)).format('DD MMM');
+		this.getPricePerServing() = function() { // PRICE PER SERVING (price/servings)
+			return ((this.price / this.servings).toFixed(2));
+		};
+		this.getMonthlyCost() = function() { // COST PER MONTH
+			return (this.getPricePerServing() * this.monthlyServingsNeed);
+		};
+		this.getProductLifetime() = function() { // HOW LONG THE PRODUCT WOULD LAST
+			let rawProductLifetime = this.monthlyServingsNeed * this.servings;
+			let humanizedProductLifetime = moment.duration(rawProductLifetime, "months").humanize(true);
+			return humanizedProductLifetime;
+		};
+		this.getNextPurchaseDate() = function() { // WHEN THE PRODUCT WILL BE OVER
+			let nextPurchaseDate_UglyFormat = moment().add(this.rawProductLifetime, 'days').calendar();
+			let nextPurchaseDate_NiceFormat = moment(new Date(nextPurchaseDate_UglyFormat)).format('DD MMM');
+			return nextPurchaseDate_NiceFormat;
+		};
+		this.displayLifetime() = function() { // DISPLAYS
+		return `Lifetime: ${humanizedProductLifetime} (${nextPurchaseDate_NiceFormat})`;
+		};
+		this.getPercentage() = function() { // PRICE PERCENTAGE AMONG ALL SUPPLEMENTS
+		let supplementationTotalSum = supplement.reduce((total, article) => total + article.price, 0);
+		let percentage = (((this.price / supplementationTotalSum )*100).toFixed(1));
+		return `${percentage}%`;
 	}
 }
+
+// Instatiating two objects
+
+let Mg = new Supplement('Magnesium', 12, 500, 90, null, 'amazon.co.uk', null)
+let D3 = new Supplement('Vitamin D3', 8, 120, 30, null, 'iHerb', null)
+
+// 2 EXAMPLES FROM OLD ARRAY WITH NON UPDATED PROPERTIES
 
 /*
 	{
@@ -54,64 +58,16 @@ class Supplement {
 	  site: "amazon.co.uk",
 	  photo: "https://images-na.ssl-images-amazon.com/images/I/61dRaF6xDML._SL1000_.jpg",
 	},
+	{
+	  description: "Vitamin D3",
+	  price: 8,
+	  servings: 120,
+	  monthlyServingsNeed: 30,
+	  pricePerServings: null,
+	  productLifetime: null,
+	  monthlyCost: null,
+	  percentage: null,
+	  site: "iHerb",
+	  photo: "https://s3.images-iherb.com/now/now00372/w/8.jpg",
+	},	
 */
-
-// 1- PRICE PER SERVING (price/servings)
-
-	var costPerServing = smartDrugs.map(function(supplement) {
-		return ((supplement.price / supplement.servings).toFixed(2))
-	});
-
-	var costPerServing = smartDrugs.map(supplement => ((supplement.price / supplement.servings).toFixed(2)));
-	console.table(costPerServing);
-
-
-	pricePerServing() {
-   		var long_pPS = supplementation.price / supplementation.servings;
-   		var round_pPS = long_pPS.toFixed(2);
-   		return round_pPS;
- 	}
-}
-
-// 3: PERCENTAGE AMONG ALL SUPPLEMENTATIONS
-
-// retourne le cout de revient du nootroopics par servings:
-
-
-
-//  creation de deux instances de l'objet
-
-var  pramiracetam 	 = new supplementation('pramiracetam','racetam',104, 200, 10, 'pPS', 'mP', '%', 'www');
-var  phenylpiracetam = new supplementation('phenylpiracetam','racetam',48, 90, 10, 'pPS', 'mP', '%', 'www');
-
-
-
-
-// monthlyCost calcul = costPerServing * monthlyServingsNeed: This nOT wORKING ! WHY ?! (21/02)
-
-	var monthlyCost = smartDrugs.map(function(product) {
-		return product.costPerServing * product.monthlyServingsNeed 
-	});
-
-	console.table(monthlyCost);
-
-// product.lifetime calcul: see moment.js coz 250 j = 8 months 7 days or 6 days or 5 days
-
-	// this gives an integer of days but doesn't translate into "months" anything
-
-    var rawProductLifetime = micronutriments.map(article => (((article.monthlyServingsNeed * article.servings)/30)))
-    console.table(rawProductLifetime);
-
-// Using .reduce
-
-	// percentage calcul
-
-		// sum calcul : 
-
-	
-
-		function 
-		var percentage = micronutriments.map(function(cognitiveEhancer) {
- 		return (((cognitiveEhancer.price / ArrayTotalSumPrice)*100).toFixed(1))
- 	});
- 	console.table(percentage + "%");

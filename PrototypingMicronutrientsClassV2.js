@@ -1,3 +1,9 @@
+/*All these declared class properties and functions in parameters work just fine except those commented.
+this file has been created in order to test the hypertheorical and intuitive classConstructormicronutrients.js
+created under limited knowledge*/
+
+// Here is the moment.s import
+
 const moment = require("moment");
 
 class Supplement {
@@ -10,23 +16,21 @@ class Supplement {
 		return((this.price / this.servings).toFixed(2)+"€");
 		};
 		this.getMonthlyCost = function() { // COST PER MONTH
-		return (((this.price / this.servings) * this.monthlyServingsNeed)+"€");
+		return ((((this.price / this.servings) * this.monthlyServingsNeed).toFixed(2))+"€");
 		};
-		this.getRawProductLifetime = function() { // HOW LONG THE PRODUCT WOULD LAST
-			return ((this.servings / this.monthlyServingsNeed).toFixed(2));
+		this.getHumanizedProductLifetime = function() { // HOW LONG THE PRODUCT WOULD LAST
+			moment.relativeTimeThreshold('d',30); // is it working ? i dont even know
+			return moment.duration(this.servings, "days").humanize(true);
 		};
-		this.getHumanizedProductLifetime = function() {
-			return moment.duration(this.getRawProductLifetime).asMonths();
-		}
-	}
-}
-
-/*/*		this.getNextPurchaseDate = function() { // WHEN THE PRODUCT WILL BE OVER
-			let nextPurchaseDate_UglyFormat = moment().add(this.rawProductLifetime, 'days').calendar();
-			let nextPurchaseDate_NiceFormat = moment(new Date(nextPurchaseDate_UglyFormat)).format('DD MMM');
-			return nextPurchaseDate_NiceFormat;
+		this.getRawNextPurchaseDate = function() { // WHEN THE PRODUCT WILL BE OVER
+			return moment().add(this.servings, 'days').calendar();
+		};
+/*
+		this.getNicePurchaseDate = function() { //CAN WE THIS WORK SOME WAY : "this.getRawNextPurchaseDate()"
+		return moment new Date(this.getRawNextPurchaseDate()).format('DD MMM');
 		};*/
-	
+	}
+}			
 /*	
 	displayLifetime(){ // DISPLAYS
 		return `Lifetime: ${humanizedProductLifetime} (${nextPurchaseDate_NiceFormat})`;
@@ -40,13 +44,13 @@ class Supplement {
 
 
 let D3 = new Supplement("Vitamin D3", 8, 120, 30);
-let Mg = new Supplement("Magnesium", 12, 500, 90);
+let Mg = new Supplement("Magnesium", 12, 170, 90);
 
-console.log(D3.getMonthlyCost());
-console.log(D3.getPricePerServing());
-console.log(Mg.getRawProductLifetime());
-console.log(D3.getHumanizedProductLifetime());
-
+console.log(`Le cout mensuel est de ${Mg.getMonthlyCost()}`);
+console.log(`Le prix par prise est de ${Mg.getPricePerServing()}`);
+console.log(`Duree du produit en jours est de ${Mg.servings} jours`);
+console.log(`Expires ${Mg.getHumanizedProductLifetime()}`);
+console.log(Mg.getRawNextPurchaseDate());
 /*console.log(D3.getProductLifetime());*/
 
 // 2 EXAMPLES FROM OLD ARRAY WITH NON UPDATED PROPERTIES
@@ -69,7 +73,7 @@ console.log(D3.getHumanizedProductLifetime());
 	  price: 8,
 	  servings: 120,
 	  monthlyServingsNeed: 30,
-	  pricePerServings: null,
+	  pricePerServing: null,
 	  productLifetime: null,
 	  monthlyCost: null,
 	  percentage: null,
